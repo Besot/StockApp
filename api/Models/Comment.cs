@@ -1,5 +1,3 @@
-
-
 namespace api.Models
 {
     public class Comment
@@ -10,6 +8,6 @@ namespace api.Models
         public DateTime CreatedOn { get; set; } = DateTime.Now; 
         public int? StockId { get; set; }
         public Stock? Stocks { get; set;}
-       
+        public int Likes { get; set; } = 0;  // Added field for like count
     }
 }

@@ -7,7 +7,12 @@ using api.Models;
 namespace api.Interfaces
 {
     public interface ICommentRepository
-    {
-        Task <List<Comment>> GetAllAsync();
+   {
+        Task<List<Comment>> GetAllAsync();
+        Task<Comment?> GetByIdAsync(int id);
+        Task<Comment> CreateAsync(Comment comment);
+        Task<bool> DeleteAsync(int id);
+        Task<bool> LikeAsync(int id);
+        Task<bool> UnlikeAsync(int id);
     }
 }
